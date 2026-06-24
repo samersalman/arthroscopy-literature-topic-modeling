@@ -13,6 +13,9 @@ identifiers:
     value: "10.5281/zenodo.20836781"
     description: "Concept DOI — always resolves to the latest release"
   - type: doi
+    value: "10.5281/zenodo.20837529"
+    description: "Version DOI — pins v1.0.0, this release"
+  - type: doi
     value: "10.5281/zenodo.20836782"
     description: "Version DOI — pins v0.1.0"
 doi: "10.5281/zenodo.20836781"
