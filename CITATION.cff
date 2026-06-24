@@ -7,16 +7,15 @@ authors:
   - family-names: Salman
     given-names: "Samer G."
   # Add co-authors here if they contributed to the analysis code (e.g., Phadke, Rohan).
-version: 1.0.0
-# --- Zenodo DOIs: backfill AFTER cutting the GitHub release (see README Step 6) ---
-# identifiers:
-#   - type: doi
-#     value: "10.5281/zenodo.XXXXXXX"   # concept DOI — always resolves to the latest release
-#     description: "Concept DOI — always resolves to the latest release"
-#   - type: doi
-#     value: "10.5281/zenodo.YYYYYYY"   # version DOI for v1.0.0
-#     description: "Version DOI — pins v1.0.0, this release"
-# doi: "10.5281/zenodo.XXXXXXX"          # concept DOI
+version: 0.1.0
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20836781"
+    description: "Concept DOI — always resolves to the latest release"
+  - type: doi
+    value: "10.5281/zenodo.20836782"
+    description: "Version DOI — pins v0.1.0, this release"
+doi: "10.5281/zenodo.20836781"
 repository-code: "https://github.com/samersalman/arthroscopy-literature-topic-modeling"
 license: MIT
 date-released: 2026-06-24

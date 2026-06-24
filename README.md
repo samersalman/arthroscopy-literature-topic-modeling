@@ -1,6 +1,6 @@
 # BERTopic Analysis of Arthroscopy Literature
 
-[![DOI](https://img.shields.io/badge/DOI-pending-lightgrey)](https://zenodo.org/) <!-- TODO: replace with the Zenodo DOI badge + link after release -->
+[![DOI](https://zenodo.org/badge/1279619889.svg)](https://doi.org/10.5281/zenodo.20836781)
 
 > **Manuscript status:** the accompanying manuscript is currently *submitted for review*.
 
@@ -224,8 +224,7 @@ No study data are distributed in this repository. The corpus consists of publicl
 
 Anyone can regenerate every table and figure by running `run_pipeline.sh` against PubMed using the query and parameters defined in `files/study_config.yaml`.
 
-Once published, the code will be permanently archived on Zenodo under an MIT license. The Zenodo **concept DOI** (which always resolves to the latest version) will be added here and to `CITATION.cff` after the first release.
-<!-- TODO: backfill the Zenodo concept + version DOIs and the badge above after cutting the GitHub release (Step 6). -->
+The code is permanently archived on Zenodo under an MIT license. Please cite the **concept DOI** [`10.5281/zenodo.20836781`](https://doi.org/10.5281/zenodo.20836781), which always resolves to the latest version. The current release (v0.1.0) also has its own version DOI, [`10.5281/zenodo.20836782`](https://doi.org/10.5281/zenodo.20836782).
 
 Repository: https://github.com/samersalman/arthroscopy-literature-topic-modeling
 
