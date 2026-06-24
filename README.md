@@ -224,7 +224,7 @@ No study data are distributed in this repository. The corpus consists of publicl
 
 Anyone can regenerate every table and figure by running `run_pipeline.sh` against PubMed using the query and parameters defined in `files/study_config.yaml`.
 
-The code is permanently archived on Zenodo under an MIT license. Please cite the **concept DOI** [`10.5281/zenodo.20836781`](https://doi.org/10.5281/zenodo.20836781), which always resolves to the latest version. The current release (v0.1.0) also has its own version DOI, [`10.5281/zenodo.20836782`](https://doi.org/10.5281/zenodo.20836782).
+The code is permanently archived on Zenodo under an MIT license. Please cite the **concept DOI** [`10.5281/zenodo.20836781`](https://doi.org/10.5281/zenodo.20836781), which always resolves to the latest version. Each tagged release also receives its own version-specific DOI on Zenodo.
 
 Repository: https://github.com/samersalman/arthroscopy-literature-topic-modeling
 
