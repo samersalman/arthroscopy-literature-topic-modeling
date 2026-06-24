@@ -1,0 +1,64 @@
+# BERTopic Sports Medicine Study — Pinned Dependencies
+# Tested on Python 3.10+; on Python 3.9 use scipy==1.13.1 instead of 1.14.0
+# Install: pip install -r requirements.txt
+
+# Core NLP / Topic Modeling
+bertopic==0.16.4
+sentence-transformers==3.0.1
+transformers==4.44.2
+torch==2.4.0
+safetensors==0.4.3
+
+# Dimensionality Reduction & Clustering
+umap-learn==0.5.6
+hdbscan==0.8.38.post1
+scikit-learn==1.5.1
+
+# Data Handling
+pandas==2.2.2
+numpy==1.26.4
+pyarrow==17.0.0
+
+# PubMed API
+biopython==1.84
+requests==2.32.3
+
+# NLP Utilities (not required by current pipeline scripts — install only if extending)
+# nltk==3.9.1
+# spacy==3.7.6
+# ratelimit==2.2.1
+
+# Visualization
+plotly==5.23.0
+matplotlib==3.9.2
+seaborn==0.13.2
+pyvis==0.3.2
+
+# Topic Coherence Evaluation
+gensim==4.3.3
+
+# Statistical Analysis
+# Pinned to 1.13.1 (not 1.14.0) for gensim 4.3.3 compatibility — gensim requires scipy<1.14.0
+scipy==1.13.1
+statsmodels==0.14.3
+pingouin==0.5.4
+
+# Reporting
+jinja2==3.1.4
+openpyxl==3.1.5
+xlsxwriter==3.2.0
+
+# Utilities
+tqdm==4.66.5
+python-dotenv==1.0.1
+loguru==0.7.2
+pyyaml==6.0.2
+joblib==1.4.2
+
+# Optional: LLM topic labeling (Phase 6 only — install separately if needed)
+# pip install openai==1.40.0
+# openai==1.40.0
+
+# Manuscript build (Phase 7)
+python-docx==1.1.2
+kaleido==0.2.1

@@ -1,0 +1,92 @@
+study:
+  title: "BERTopic Analysis of Sports Medicine Orthopedic Surgery Literature"
+  version: "1.0.0"
+  journal: "ARTHROSCOPY"
+
+data:
+  start_year: 1995
+  end_year: 2025
+  min_abstract_words: 50
+  min_abstract_chars: 200
+  target_journals:
+    AJSM:
+      pubmed_query: '"Am J Sports Med"[Journal]'
+      full_name: "American Journal of Sports Medicine"
+    ARTHROSCOPY:
+      pubmed_query: '"Arthroscopy"[Journal]'
+      full_name: "Arthroscopy: Journal of Arthroscopic and Related Surgery"
+    KSSTA:
+      pubmed_query: '"Knee Surg Sports Traumatol Arthrosc"[Journal]'
+      full_name: "Knee Surgery, Sports Traumatology, Arthroscopy"
+    JISAKOS:
+      pubmed_query: '"J ISAKOS"[Journal]'
+      full_name: "Journal of ISAKOS"
+    OJSM:
+      pubmed_query: '"Orthop J Sports Med"[Journal]'
+      full_name: "Orthopaedic Journal of Sports Medicine"
+
+embedding:
+  # MPNet (all-mpnet-base-v2) is the model REPORTED in the manuscript and the repo default.
+  # PubMedBERT is retained as a documented domain-specific sensitivity comparison.
+  primary_model: "mpnet"
+  comparison_model: "pubmedbert"
+  batch_size: 32
+  normalize: true
+  model_map:
+    pubmedbert: "microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract"
+    mpnet: "sentence-transformers/all-mpnet-base-v2"
+    minilm: "sentence-transformers/all-MiniLM-L6-v2"
+    biomedbert-large: "microsoft/BiomedNLP-BiomedBERT-large-uncased-abstract"
+
+umap:
+  n_neighbors: 15
+  n_components: 5
+  min_dist: 0.0
+  metric: "cosine"
+  random_state: 42
+  low_memory: false
+
+hdbscan:
+  min_cluster_size: 50
+  min_samples: 10
+  metric: "euclidean"
+  cluster_selection_method: "eom"
+  prediction_data: true
+
+grid_search:
+  enabled: true
+  n_neighbors: [10, 15, 20, 30]
+  min_cluster_size: [30, 50, 75, 100]
+  min_samples: [10]
+  cluster_selection_method: ["eom"]
+  max_noise_pct: 25.0
+  selection_criterion: "coherence_npmi"
+
+representation:
+  top_n_words: 10
+  ngram_range: [1, 2]
+  min_df: 5
+  max_df: 0.85
+  use_llm_labels: false
+  llm_model: "gpt-4o"
+  mmr_diversity: 0.3
+
+temporal:
+  trend_alpha: 0.05
+  emerging_recent_pct: 0.6
+  nr_bins: 10
+  evolution_tuning: true
+  global_tuning: true
+
+validation:
+  coherence_metric: "c_npmi"
+  coherence_top_n: 10
+  silhouette_sample_size: 5000
+  target_noise_pct_max: 25.0
+
+output:
+  save_model: true
+  model_serialization: "safetensors"
+  generate_figures: true
+  generate_tables: true
+  figure_format: "html"

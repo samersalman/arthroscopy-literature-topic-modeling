@@ -1,0 +1,66 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Credentials — NEVER commit
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Large data and model files — re-generate with pipeline
+data/raw/
+data/processed/
+data/embeddings/
+outputs/models/
+
+# Generated outputs (optional — commit if you want to share results)
+# outputs/figures/
+# outputs/tables/
+# outputs/reports/
+# outputs/vosviewer/
+
+# Claude Code session files
+.claude/
+
+# macOS
+.DS_Store
+.AppleDouble
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+
+# Hardening: never publish data, outputs, drafts, or working files
+# (defense-in-depth — broadens the entries above; nothing removed)
+data/
+outputs/
+plans/
+*.docx
+*.pdf
+*.ris
+**/doc_topics_*.csv
+*.npy
+*.safetensors
+
+# Local agent / assistant instructions (not for public repo)
+CLAUDE.md
+AGENTS.md
+
+# Excluded from this analysis-only release (defense-in-depth)
+src/07_manuscript/
+scripts/
+**/generate_panels.py
